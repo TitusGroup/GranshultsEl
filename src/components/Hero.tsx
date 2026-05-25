@@ -1,34 +1,51 @@
-import heroImage from "@/assets/hero-architecture.jpg";
+import { Button } from "@/components/ui/button";
+import { Phone, ArrowRight, ShieldCheck, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-electrician.jpg";
+import { company } from "@/lib/company";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      <img
+        src={heroImage}
+        alt="Elektriker från Granshults El arbetar med elcentral"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 w-full h-full object-cover"
       />
-      
-      {/* Overlay */}
-      <div className="absolute inset-0 hero-overlay" />
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-white text-architectural mb-8 reveal">
-          MINIMAL
-          <br />
-          ARCHITECTURE
-        </h1>
-        <p className="text-xl md:text-2xl text-white/80 font-light tracking-wide max-w-2xl mx-auto reveal-delayed">
-          Creating spaces that inspire through thoughtful design and uncompromising quality
-        </p>
-      </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reveal-delayed">
-        <div className="w-px h-16 bg-white/40" />
-        <div className="text-minimal text-white/60 mt-4 rotate-90 origin-center">
-          SCROLL
+      <div className="absolute inset-0 bg-gradient-hero" />
+
+      <div className="relative z-10 container mx-auto px-6 py-32">
+        <div className="max-w-3xl reveal">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-white/90 text-xs font-medium border border-white/15 mb-6">
+            <MapPin className="h-3.5 w-3.5" /> {company.area}
+          </div>
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-white leading-[1.05] mb-6">
+            Trygg el utförd av <span className="text-brand">certifierade</span> elektriker.
+          </h1>
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
+            Från elinstallation och solceller till laddboxar och felsökning —
+            {" "}{company.name} hjälper villaägare och företag i Bankeryd och hela Jönköpingsområdet.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <Button asChild size="lg" className="bg-brand text-brand-foreground hover:bg-brand/90">
+              <a href={company.phoneHref}>
+                <Phone className="h-4 w-4" /> Ring {company.phone}
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 hover:text-white">
+              <Link to="/contact">
+                Begär offert <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 text-white/85 text-sm reveal-delayed">
+            <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Behörigt elinstallationsföretag</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> ROT-avdrag direkt på fakturan</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Fast pris eller löpande</span>
+          </div>
         </div>
       </div>
     </section>
