@@ -2,110 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimal Architecture Design System - Black & White Excellence */
+/* Granshults El — Trust Navy design system */
 
 @layer base {
   :root {
-    /* Pure Architecture Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    
+    --background: 210 40% 98%;
+    --foreground: 222 50% 11%;
+
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    
+    --card-foreground: 222 50% 11%;
+
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    
-    /* Primary: Pure Black */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
-    
-    /* Secondary: Pure White */
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
-    
-    /* Muted: Subtle Gray */
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 20%;
-    
-    /* Accent: Elegant Gray */
-    --accent: 0 0% 95%;
-    --accent-foreground: 0 0% 0%;
-    
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 222 50% 11%;
+
+    /* Primary: Trust Navy */
+    --primary: 222 60% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Brand accent: mid blue */
+    --brand: 212 56% 43%;
+    --brand-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 50% 15%;
+
+    --muted: 214 32% 94%;
+    --muted-foreground: 215 16% 40%;
+
+    --accent: 212 56% 43%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 90%;
-    --input: 0 0% 95%;
-    --ring: 0 0% 0%;
+
+    --border: 214 25% 88%;
+    --input: 214 25% 92%;
+    --ring: 212 56% 43%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-primary: 222 60% 15%;
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 212 56% 43%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
-    
-    /* Architecture Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.8), hsl(0 0% 0% / 0.4));
-    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.9), hsl(0 0% 0% / 0.1));
-    
-    /* Elegant Shadows */
-    --shadow-architectural: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
-    
-    /* Smooth Transitions */
+    --gradient-hero: linear-gradient(135deg, hsl(222 60% 10% / 0.85), hsl(222 60% 15% / 0.45));
+    --gradient-overlay: linear-gradient(180deg, hsl(222 60% 10% / 0.85), hsl(222 60% 10% / 0.15));
+    --gradient-brand: linear-gradient(135deg, hsl(222 60% 15%), hsl(212 56% 43%));
+
+    --shadow-elegant: 0 10px 30px -10px hsl(222 60% 15% / 0.18);
+    --shadow-card: 0 4px 20px -8px hsl(222 60% 15% / 0.15);
+
     --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-fast: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-    
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 100%;
-    
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
-    
-    --accent: 0 0% 15%;
-    --accent-foreground: 0 0% 100%;
-    
-    --destructive: 0 84.2% 60.2%;
+    --background: 222 60% 6%;
+    --foreground: 210 40% 98%;
+    --card: 222 50% 9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 50% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 60% 10%;
+    --brand: 212 70% 60%;
+    --brand-foreground: 222 60% 10%;
+    --secondary: 222 40% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 40% 14%;
+    --muted-foreground: 215 20% 70%;
+    --accent: 212 70% 55%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
-    --border: 0 0% 15%;
-    --input: 0 0% 10%;
-    --ring: 0 0% 100%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 222 40% 18%;
+    --input: 222 40% 14%;
+    --ring: 212 70% 60%;
   }
 }
 
@@ -113,39 +90,27 @@
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
-  /* Architectural Typography */
-  .text-architectural {
-    @apply tracking-[-0.02em] leading-[1.1];
+  .text-eyebrow {
+    @apply tracking-[0.18em] uppercase text-xs font-semibold;
   }
-  
-  .text-minimal {
-    @apply tracking-wide uppercase text-xs font-medium;
-  }
-  
-  /* Hero Image Overlay */
   .hero-overlay {
     background: var(--gradient-overlay);
   }
-  
-  /* Smooth Reveal Animation */
+  .bg-brand-gradient {
+    background: var(--gradient-brand);
+  }
   .reveal {
-    @apply opacity-0 translate-y-8;
-    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    @apply opacity-0 translate-y-6;
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
-  
   .reveal-delayed {
-    @apply opacity-0 translate-y-8;
-    animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    @apply opacity-0 translate-y-6;
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
   }
-  
   @keyframes reveal {
-    to {
-      @apply opacity-100 translate-y-0;
-    }
+    to { @apply opacity-100 translate-y-0; }
   }
 }
