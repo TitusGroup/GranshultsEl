@@ -18,13 +18,10 @@ const Navigation = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/50 via-background/20 to-transparent [text-shadow:0_1px_3px_rgba(0,0,0,0.25)]">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-gradient text-brand-foreground shadow-elegant font-bold text-lg leading-none select-none">
-            G
-          </span>
-          <span className="font-semibold tracking-tight text-foreground text-lg">
+        <Link to="/" className="group">
+          <span className="font-bold tracking-tight text-foreground text-xl">
             {company.shortName}
           </span>
         </Link>
