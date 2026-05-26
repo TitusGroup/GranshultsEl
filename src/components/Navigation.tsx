@@ -71,9 +71,8 @@ const Navigation = () => {
                 {l.label}
               </Link>
             ))}
-            <div className="flex items-center justify-between pt-4 border-t border-border">
-              <ThemeToggle />
-              <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
+            <div className="pt-4 border-t border-border">
+              <Button asChild size="sm" className="w-full bg-brand text-brand-foreground hover:bg-brand/90">
                 <a href={company.phoneHref}>
                   <Phone className="h-4 w-4" /> Ring oss
                 </a>
