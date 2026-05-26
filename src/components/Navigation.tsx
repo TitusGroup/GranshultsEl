@@ -41,8 +41,7 @@ const Navigation = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <ThemeToggle />
+        <div className="hidden md:flex items-center">
           <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
             <a href={company.phoneHref}>
               <Phone className="h-4 w-4" /> {company.phone}
