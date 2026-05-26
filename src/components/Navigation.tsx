@@ -18,7 +18,7 @@ const Navigation = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/50 via-background/20 to-transparent [text-shadow:0_1px_3px_rgba(0,0,0,0.25)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/60 via-background/30 to-transparent [text-shadow:0_1px_4px_rgba(0,0,0,0.35)]">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="group">
           <span className="font-bold tracking-tight text-foreground text-xl">
@@ -26,13 +26,15 @@ const Navigation = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-2">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-sm font-medium transition-colors ${
-                pathname === l.to ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`relative px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 ${
+                pathname === l.to
+                  ? "bg-brand/20 text-brand shadow-sm"
+                  : "text-foreground/90 hover:bg-brand/15 hover:text-brand"
               }`}
             >
               {l.label}
