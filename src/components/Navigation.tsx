@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import { Phone, Menu, X } from "lucide-react";
 import { company } from "@/lib/company";
 
@@ -42,8 +41,7 @@ const Navigation = () => {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center gap-3">
-          <ThemeToggle />
+        <div className="hidden md:flex items-center">
           <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
             <a href={company.phoneHref}>
               <Phone className="h-4 w-4" /> {company.phone}
@@ -73,9 +71,8 @@ const Navigation = () => {
                 {l.label}
               </Link>
             ))}
-            <div className="flex items-center justify-between pt-4 border-t border-border">
-              <ThemeToggle />
-              <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
+            <div className="pt-4 border-t border-border">
+              <Button asChild size="sm" className="w-full bg-brand text-brand-foreground hover:bg-brand/90">
                 <a href={company.phoneHref}>
                   <Phone className="h-4 w-4" /> Ring oss
                 </a>
