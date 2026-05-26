@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { Phone, Menu, X, Zap } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { company } from "@/lib/company";
 
 const links = [
@@ -20,9 +20,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-gradient text-brand-foreground shadow-elegant">
-            <Zap className="h-5 w-5" strokeWidth={2.5} />
+        <Link to="/" className="flex items-center gap-2.5 group">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-brand-gradient text-brand-foreground shadow-elegant font-bold text-lg leading-none select-none">
+            G
           </span>
           <span className="font-semibold tracking-tight text-foreground text-lg">
             {company.shortName}
