@@ -26,13 +26,15 @@ const Navigation = () => {
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-2">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
-              className={`text-sm font-medium transition-colors ${
-                pathname === l.to ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+              className={`relative px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 ${
+                pathname === l.to
+                  ? "bg-brand/20 text-brand shadow-sm"
+                  : "text-foreground/90 hover:bg-brand/15 hover:text-brand"
               }`}
             >
               {l.label}
