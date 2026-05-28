@@ -211,14 +211,57 @@ const Contact = () => {
               <Input id="email" name="email" type="email" required maxLength={255} className="mt-1.5" />
             </div>
             <div>
-              <Label htmlFor="message">Meddelande *</Label>
+              <Label htmlFor="address">Adress för jobbet *</Label>
+              <Input
+                id="address"
+                name="address"
+                required
+                maxLength={200}
+                placeholder="Gatuadress, postnummer och ort"
+                className="mt-1.5"
+              />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="jobType">Typ av jobb *</Label>
+                <select
+                  id="jobType"
+                  name="jobType"
+                  required
+                  defaultValue=""
+                  className="mt-1.5 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="" disabled>Välj…</option>
+                  {JOB_TYPES.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <Label htmlFor="timing">Önskad tid *</Label>
+                <select
+                  id="timing"
+                  name="timing"
+                  required
+                  defaultValue=""
+                  className="mt-1.5 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="" disabled>Välj…</option>
+                  {TIMINGS.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div>
+              <Label htmlFor="message">Beskrivning *</Label>
               <Textarea
                 id="message"
                 name="message"
                 required
                 rows={6}
                 maxLength={2000}
-                placeholder="Beskriv vad du behöver hjälp med, adress och eventuell tidsram."
+                placeholder="Beskriv jobbet — omfattning, antal rum, befintlig installation, ROT m.m."
                 className="mt-1.5"
               />
             </div>
