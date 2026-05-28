@@ -13,8 +13,30 @@ const schema = z.object({
   name: z.string().trim().min(2, "Ange ditt namn").max(100),
   email: z.string().trim().email("Ogiltig e-postadress").max(255),
   phone: z.string().trim().max(40).optional().or(z.literal("")),
+  address: z.string().trim().min(3, "Ange adress för jobbet").max(200),
+  jobType: z.string().trim().min(1, "Välj typ av jobb").max(80),
+  timing: z.string().trim().min(1, "Välj önskad tid").max(80),
   message: z.string().trim().min(5, "Skriv ett kort meddelande").max(2000),
 });
+
+const JOB_TYPES = [
+  "Felsökning / reparation",
+  "Elcentral / säkringsskåp",
+  "Belysning",
+  "Uttag & strömbrytare",
+  "Laddbox för elbil",
+  "Solceller",
+  "Nybyggnation / renovering",
+  "Smart hem",
+  "Annat",
+];
+
+const TIMINGS = [
+  "Akut (inom 24 h)",
+  "Inom en vecka",
+  "Inom 2–4 veckor",
+  "Flexibelt / längre fram",
+];
 
 const MAX_FILES = 8;
 const MAX_SIZE = 10 * 1024 * 1024; // 10 MB
