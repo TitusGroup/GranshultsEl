@@ -94,6 +94,9 @@ const Contact = () => {
       name: String(form.get("name") || ""),
       email: String(form.get("email") || ""),
       phone: String(form.get("phone") || ""),
+      address: String(form.get("address") || ""),
+      jobType: String(form.get("jobType") || ""),
+      timing: String(form.get("timing") || ""),
       message: String(form.get("message") || ""),
     };
     const parsed = schema.safeParse(data);
@@ -112,13 +115,19 @@ const Contact = () => {
         toast({ title: "Laddar upp bilder...", description: `${files.length} bild(er)` });
         attachmentUrls = await uploadFiles();
       }
-      const subject = encodeURIComponent(`Förfrågan från ${parsed.data.name}`);
+      const subject = encodeURIComponent(`Offertförfrågan: ${parsed.data.jobType} — ${parsed.data.name}`);
       const attachmentsText =
         attachmentUrls.length > 0
           ? `\n\nBifogade bilder (${attachmentUrls.length}):\n${attachmentUrls.map((u, i) => `${i + 1}. ${u}`).join("\n")}`
           : "";
       const body = encodeURIComponent(
-        `Namn: ${parsed.data.name}\nE-post: ${parsed.data.email}\nTelefon: ${parsed.data.phone || "-"}\n\n${parsed.data.message}${attachmentsText}`
+        `Namn: ${parsed.data.name}\n` +
+          `E-post: ${parsed.data.email}\n` +
+          `Telefon: ${parsed.data.phone || "-"}\n` +
+          `Adress: ${parsed.data.address}\n` +
+          `Typ av jobb: ${parsed.data.jobType}\n` +
+          `Önskad tid: ${parsed.data.timing}\n\n` +
+          `Beskrivning:\n${parsed.data.message}${attachmentsText}`
       );
       window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
       toast({
