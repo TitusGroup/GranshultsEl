@@ -1,0 +1,1 @@
+drop policy if exists "Public can read quote attachments" on storage.objects;
