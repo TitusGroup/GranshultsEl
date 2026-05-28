@@ -13,8 +13,30 @@ const schema = z.object({
   name: z.string().trim().min(2, "Ange ditt namn").max(100),
   email: z.string().trim().email("Ogiltig e-postadress").max(255),
   phone: z.string().trim().max(40).optional().or(z.literal("")),
+  address: z.string().trim().min(3, "Ange adress för jobbet").max(200),
+  jobType: z.string().trim().min(1, "Välj typ av jobb").max(80),
+  timing: z.string().trim().min(1, "Välj önskad tid").max(80),
   message: z.string().trim().min(5, "Skriv ett kort meddelande").max(2000),
 });
+
+const JOB_TYPES = [
+  "Felsökning / reparation",
+  "Elcentral / säkringsskåp",
+  "Belysning",
+  "Uttag & strömbrytare",
+  "Laddbox för elbil",
+  "Solceller",
+  "Nybyggnation / renovering",
+  "Smart hem",
+  "Annat",
+];
+
+const TIMINGS = [
+  "Akut (inom 24 h)",
+  "Inom en vecka",
+  "Inom 2–4 veckor",
+  "Flexibelt / längre fram",
+];
 
 const MAX_FILES = 8;
 const MAX_SIZE = 10 * 1024 * 1024; // 10 MB
@@ -72,6 +94,9 @@ const Contact = () => {
       name: String(form.get("name") || ""),
       email: String(form.get("email") || ""),
       phone: String(form.get("phone") || ""),
+      address: String(form.get("address") || ""),
+      jobType: String(form.get("jobType") || ""),
+      timing: String(form.get("timing") || ""),
       message: String(form.get("message") || ""),
     };
     const parsed = schema.safeParse(data);
@@ -90,13 +115,19 @@ const Contact = () => {
         toast({ title: "Laddar upp bilder...", description: `${files.length} bild(er)` });
         attachmentUrls = await uploadFiles();
       }
-      const subject = encodeURIComponent(`Förfrågan från ${parsed.data.name}`);
+      const subject = encodeURIComponent(`Offertförfrågan: ${parsed.data.jobType} — ${parsed.data.name}`);
       const attachmentsText =
         attachmentUrls.length > 0
           ? `\n\nBifogade bilder (${attachmentUrls.length}):\n${attachmentUrls.map((u, i) => `${i + 1}. ${u}`).join("\n")}`
           : "";
       const body = encodeURIComponent(
-        `Namn: ${parsed.data.name}\nE-post: ${parsed.data.email}\nTelefon: ${parsed.data.phone || "-"}\n\n${parsed.data.message}${attachmentsText}`
+        `Namn: ${parsed.data.name}\n` +
+          `E-post: ${parsed.data.email}\n` +
+          `Telefon: ${parsed.data.phone || "-"}\n` +
+          `Adress: ${parsed.data.address}\n` +
+          `Typ av jobb: ${parsed.data.jobType}\n` +
+          `Önskad tid: ${parsed.data.timing}\n\n` +
+          `Beskrivning:\n${parsed.data.message}${attachmentsText}`
       );
       window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
       toast({
@@ -180,14 +211,57 @@ const Contact = () => {
               <Input id="email" name="email" type="email" required maxLength={255} className="mt-1.5" />
             </div>
             <div>
-              <Label htmlFor="message">Meddelande *</Label>
+              <Label htmlFor="address">Adress för jobbet *</Label>
+              <Input
+                id="address"
+                name="address"
+                required
+                maxLength={200}
+                placeholder="Gatuadress, postnummer och ort"
+                className="mt-1.5"
+              />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div>
+                <Label htmlFor="jobType">Typ av jobb *</Label>
+                <select
+                  id="jobType"
+                  name="jobType"
+                  required
+                  defaultValue=""
+                  className="mt-1.5 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="" disabled>Välj…</option>
+                  {JOB_TYPES.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <Label htmlFor="timing">Önskad tid *</Label>
+                <select
+                  id="timing"
+                  name="timing"
+                  required
+                  defaultValue=""
+                  className="mt-1.5 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                >
+                  <option value="" disabled>Välj…</option>
+                  {TIMINGS.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+            <div>
+              <Label htmlFor="message">Beskrivning *</Label>
               <Textarea
                 id="message"
                 name="message"
                 required
                 rows={6}
                 maxLength={2000}
-                placeholder="Beskriv vad du behöver hjälp med, adress och eventuell tidsram."
+                placeholder="Beskriv jobbet — omfattning, antal rum, befintlig installation, ROT m.m."
                 className="mt-1.5"
               />
             </div>
