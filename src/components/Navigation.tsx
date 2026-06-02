@@ -17,29 +17,30 @@ const Navigation = () => {
   const { pathname } = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/60 via-background/30 to-transparent [text-shadow:0_1px_4px_rgba(0,0,0,0.35)]">
+    <nav className="fixed top-0 left-0 right-0 z-50 [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <Link to="/" className="group">
-          <span className="font-bold tracking-tight text-foreground text-xl">
+          <span className="font-bold tracking-tight text-white text-xl">
             {company.shortName}
           </span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-2 py-1.5 shadow-lg">
           {links.map((l) => (
             <Link
               key={l.to}
               to={l.to}
               className={`relative px-4 py-2 rounded-full text-base font-semibold transition-all duration-300 ${
                 pathname === l.to
-                  ? "bg-brand/20 text-brand shadow-sm"
-                  : "text-foreground/90 hover:bg-brand/15 hover:text-brand"
+                  ? "bg-brand text-brand-foreground shadow-md"
+                  : "text-white hover:bg-white/20"
               }`}
             >
               {l.label}
             </Link>
           ))}
         </div>
+
 
         <div className="hidden md:flex items-center">
           <Button asChild size="sm" className="bg-brand text-brand-foreground hover:bg-brand/90">
