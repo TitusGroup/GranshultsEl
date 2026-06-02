@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="landing-theme min-h-screen bg-background text-foreground">
+    <div className="min-h-screen">
       <Navigation />
       <main>
         <Hero />
