@@ -65,6 +65,10 @@ const faqs = [
     a: "Ja. Som privatperson drar vi av ROT direkt på fakturan (30 % på arbetskostnaden upp till gällande tak) och ansöker hos Skatteverket åt dig.",
   },
   {
+    q: "Gör ni grönt bidrag åt mig?",
+    a: "Ja. Vid solceller och annan grön teknik drar vi av det gröna avdraget direkt på fakturan och sköter ansökan hos Skatteverket åt dig.",
+  },
+  {
     q: "Hur snabbt kan ni komma ut?",
     a: "Akuta fel prioriterar vi samma eller nästa vardag. Planerade jobb bokas oftast inom 1–2 veckor beroende på säsong.",
   },
