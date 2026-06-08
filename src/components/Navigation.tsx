@@ -19,7 +19,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 [text-shadow:0_1px_6px_rgba(0,0,0,0.4)]">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="group">
+        <Link to="/" className="group" onClick={() => setIsOpen(false)}>
           <span className="font-bold tracking-tight text-white text-xl">
             {company.shortName}
           </span>
