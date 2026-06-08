@@ -9,7 +9,7 @@ const Hero = () => {
     <section className="relative min-h-[92vh] flex items-center overflow-hidden">
       <img
         src={heroImage}
-        alt="Elektriker från Granshults El arbetar med elcentral"
+        alt="Elektriker från Granshults el arbetar med elcentral"
         width={1920}
         height={1080}
         className="absolute inset-0 w-full h-full object-cover"
@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
             Från elinstallation och solceller till laddboxar och felsökning —
-            {" "}{company.name} hjälper villaägare och företag i Bankeryd och hela Jönköpingsområdet.
+            {" "}{company.name} hjälper privatpersoner och företag i Bankeryd och hela Jönköpingsområdet.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg" className="bg-brand text-brand-foreground hover:bg-brand/90">
