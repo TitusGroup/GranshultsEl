@@ -1,6 +1,6 @@
 export const company = {
-  name: "Granshults El",
-  shortName: "Granshults El",
+  name: "Granshults el",
+  shortName: "Granshults el",
   tagline: "Din lokala elektriker i Bankeryd & Jönköping",
   area: "Bankeryd, Jönköping med omnejd",
   phone: "070-720 00 21",
