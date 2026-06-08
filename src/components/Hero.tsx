@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
             Från elinstallation och solceller till laddboxar och felsökning —
-            {" "}{company.name} hjälper privatpersoner och företag i Bankeryd och hela Jönköpingsområdet.
+            {" "}{company.name} hjälper företag och privatpersoner i Bankeryd och hela Jönköpingsområdet.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button asChild size="lg" className="bg-brand text-brand-foreground hover:bg-brand/90">
