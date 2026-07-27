@@ -9,19 +9,27 @@ const Hero = () => {
       {/* Logo watermark background */}
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_13%)] to-[hsl(212_50%_18%)]" />
-        
+
         {/* Large subtle logo text */}
-        <span 
-          className="select-none whitespace-nowrap font-bold tracking-tighter text-[18vw] md:text-[16vw] lg:text-[14vw] text-white/[0.04]"
+        <span
+          className="select-none whitespace-nowrap font-bold tracking-tighter text-[17vw] md:text-[15vw] lg:text-[13vw] text-white/[0.055]"
           aria-hidden="true"
         >
           {company.shortName}
         </span>
 
+        {/* GE monogram mark */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-bold tracking-tighter text-[40vw] md:text-[34vw] lg:text-[28vw] text-transparent bg-clip-text bg-gradient-to-b from-white/[0.06] to-white/[0.01]"
+          aria-hidden="true"
+        >
+          GE
+        </div>
+
         {/* Decorative rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-white/[0.04]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45vw] h-[45vw] rounded-full border border-white/[0.06]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-white/[0.05]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45vw] h-[45vw] rounded-full border border-white/[0.07]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/15" />
 
         {/* Soft glow orbs */}
         <div className="absolute top-[20%] right-[15%] w-64 h-64 rounded-full bg-brand/10 blur-[100px]" />
