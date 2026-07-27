@@ -1,4 +1,4 @@
-import { Sun, Plug, Lightbulb, Wrench, Home, Building2 } from "lucide-react";
+import { Sun, Plug, Lightbulb, Wrench, Home, Building2, Cpu, Cog, ShieldCheck } from "lucide-react";
 
 const services = [
   {
@@ -36,6 +36,24 @@ const services = [
     title: "Företag & fastighet",
     description:
       "Service och elarbeten åt företag, butiker och bostadsrättsföreningar i Jönköpingsområdet.",
+  },
+  {
+    icon: Cpu,
+    title: "Fastighetsautomation",
+    description:
+      "Smart styrning av belysning, värme, ventilation och säkerhet — vi integrerar system som gör fastigheten mer effektiv och bekväm.",
+  },
+  {
+    icon: Cog,
+    title: "Automation",
+    description:
+      "Automatiserade lösningar för hem och industri. Vi programmerar och installerar styrsystem som förenklar vardagen och sparar energi.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Data, nätverk & inbrottslarm",
+    description:
+      "Nätverksinstallation, robusta datauttag och säkra inbrottslarm — vi ser till att både uppkoppling och trygghet fungerar felfritt.",
   },
 ];
 
