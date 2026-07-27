@@ -10,9 +10,9 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_14%)] to-[hsl(212_45%_20%)]" />
 
-        {/* GE monogram mark — large and brand-tinted */}
+        {/* GE monogram mark — positioned right, brand-tinted */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-bold tracking-tighter text-[42vw] md:text-[36vw] lg:text-[30vw] leading-none text-brand/[0.12]"
+          className="absolute top-1/2 right-[-6vw] md:right-[2vw] -translate-y-1/2 select-none font-bold tracking-tighter text-[46vw] md:text-[34vw] lg:text-[28vw] leading-none text-brand/[0.14]"
           aria-hidden="true"
         >
           GE
@@ -20,16 +20,16 @@ const Hero = () => {
 
         {/* Full name watermark */}
         <span
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[10vw] select-none whitespace-nowrap font-semibold tracking-[0.2em] uppercase text-[3vw] md:text-[2.4vw] text-white/[0.08]"
+          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.09]"
           aria-hidden="true"
         >
           {company.shortName}
         </span>
 
         {/* Decorative rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[58vw] h-[58vw] rounded-full border border-white/[0.06]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44vw] h-[44vw] rounded-full border border-white/[0.08]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/20" />
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[50vw] h-[50vw] rounded-full border border-white/[0.05]" />
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[38vw] h-[38vw] rounded-full border border-white/[0.07]" />
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[26vw] h-[26vw] rounded-full border border-brand/20" />
 
         {/* Soft glow orbs */}
         <div className="absolute top-[18%] right-[12%] w-72 h-72 rounded-full bg-brand/12 blur-[110px]" />
