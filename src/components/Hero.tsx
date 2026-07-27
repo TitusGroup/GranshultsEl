@@ -1,19 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, ShieldCheck, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-electrician.jpg";
 import { company } from "@/lib/company";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-      <img
-        src={heroImage}
-        alt="Elektriker från Granshults el arbetar med elcentral"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[hsl(222_60%_10%)]">
+      {/* Logo watermark background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_14%)] to-[hsl(212_45%_20%)]" />
+
+        {/* GE monogram mark — positioned right, brand-tinted */}
+        <div
+          className="absolute top-1/2 right-[-6vw] md:right-[2vw] -translate-y-1/2 select-none font-bold tracking-tighter text-[46vw] md:text-[34vw] lg:text-[28vw] leading-none text-brand/[0.14]"
+          aria-hidden="true"
+        >
+          GE
+        </div>
+
+        {/* Full name watermark */}
+        <span
+          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.09]"
+          aria-hidden="true"
+        >
+          {company.shortName}
+        </span>
+
+        {/* Decorative rings */}
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[50vw] h-[50vw] rounded-full border border-white/[0.05]" />
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[38vw] h-[38vw] rounded-full border border-white/[0.07]" />
+        <div className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[26vw] h-[26vw] rounded-full border border-brand/20" />
+
+        {/* Soft glow orbs */}
+        <div className="absolute top-[18%] right-[12%] w-72 h-72 rounded-full bg-brand/12 blur-[110px]" />
+        <div className="absolute bottom-[16%] left-[8%] w-96 h-96 rounded-full bg-[hsl(222_60%_28%)]/25 blur-[130px]" />
+
+        {/* Subtle electric grid lines */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
+      </div>
+
       <div className="absolute inset-0 bg-gradient-hero" />
 
       <div className="relative z-10 container mx-auto px-6 py-32">
