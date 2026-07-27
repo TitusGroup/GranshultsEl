@@ -1,4 +1,4 @@
-import { Sun, Plug, Lightbulb, Wrench, Home, Building2 } from "lucide-react";
+import { Sun, Plug, Lightbulb, Wrench, Home, Building2, Cpu, Cog, ShieldCheck } from "lucide-react";
 
 const services = [
   {
