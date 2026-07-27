@@ -1,19 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, ShieldCheck, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-electrician.jpg";
 import { company } from "@/lib/company";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden">
-      <img
-        src={heroImage}
-        alt="Elektriker från Granshults el arbetar med elcentral"
-        width={1920}
-        height={1080}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[hsl(222_60%_10%)]">
+      {/* Logo watermark background */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_13%)] to-[hsl(212_50%_18%)]" />
+        
+        {/* Large subtle logo text */}
+        <span 
+          className="select-none whitespace-nowrap font-bold tracking-tighter text-[18vw] md:text-[16vw] lg:text-[14vw] text-white/[0.04]"
+          aria-hidden="true"
+        >
+          {company.shortName}
+        </span>
+
+        {/* Decorative rings */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-white/[0.04]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45vw] h-[45vw] rounded-full border border-white/[0.06]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/10" />
+
+        {/* Soft glow orbs */}
+        <div className="absolute top-[20%] right-[15%] w-64 h-64 rounded-full bg-brand/10 blur-[100px]" />
+        <div className="absolute bottom-[20%] left-[10%] w-80 h-80 rounded-full bg-[hsl(222_60%_25%)]/20 blur-[120px]" />
+      </div>
+
       <div className="absolute inset-0 bg-gradient-hero" />
 
       <div className="relative z-10 container mx-auto px-6 py-32">
