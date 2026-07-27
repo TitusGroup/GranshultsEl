@@ -7,33 +7,36 @@ const Hero = () => {
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[hsl(222_60%_10%)]">
       {/* Logo watermark background */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_13%)] to-[hsl(212_50%_18%)]" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_14%)] to-[hsl(212_45%_20%)]" />
 
-        {/* Large subtle logo text */}
-        <span
-          className="select-none whitespace-nowrap font-bold tracking-tighter text-[17vw] md:text-[15vw] lg:text-[13vw] text-white/[0.055]"
-          aria-hidden="true"
-        >
-          {company.shortName}
-        </span>
-
-        {/* GE monogram mark */}
+        {/* GE monogram mark — large and brand-tinted */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-bold tracking-tighter text-[40vw] md:text-[34vw] lg:text-[28vw] text-transparent bg-clip-text bg-gradient-to-b from-white/[0.06] to-white/[0.01]"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none font-bold tracking-tighter text-[42vw] md:text-[36vw] lg:text-[30vw] leading-none text-brand/[0.12]"
           aria-hidden="true"
         >
           GE
         </div>
 
+        {/* Full name watermark */}
+        <span
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-[10vw] select-none whitespace-nowrap font-semibold tracking-[0.2em] uppercase text-[3vw] md:text-[2.4vw] text-white/[0.08]"
+          aria-hidden="true"
+        >
+          {company.shortName}
+        </span>
+
         {/* Decorative rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60vw] h-[60vw] rounded-full border border-white/[0.05]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45vw] h-[45vw] rounded-full border border-white/[0.07]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/15" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[58vw] h-[58vw] rounded-full border border-white/[0.06]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[44vw] h-[44vw] rounded-full border border-white/[0.08]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] h-[30vw] rounded-full border border-brand/20" />
 
         {/* Soft glow orbs */}
-        <div className="absolute top-[20%] right-[15%] w-64 h-64 rounded-full bg-brand/10 blur-[100px]" />
-        <div className="absolute bottom-[20%] left-[10%] w-80 h-80 rounded-full bg-[hsl(222_60%_25%)]/20 blur-[120px]" />
+        <div className="absolute top-[18%] right-[12%] w-72 h-72 rounded-full bg-brand/12 blur-[110px]" />
+        <div className="absolute bottom-[16%] left-[8%] w-96 h-96 rounded-full bg-[hsl(222_60%_28%)]/25 blur-[130px]" />
+
+        {/* Subtle electric grid lines */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
       </div>
 
       <div className="absolute inset-0 bg-gradient-hero" />
