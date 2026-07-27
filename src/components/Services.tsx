@@ -51,7 +51,7 @@ const services = [
   },
   {
     icon: ShieldCheck,
-    title: "Data nätverk & inbrottslarm",
+    title: "Datanätverk & inbrottslarm",
     description:
       "Nätverksinstallation, robusta datauttag och säkra inbrottslarm — vi ser till att både uppkoppling och trygghet fungerar felfritt.",
   },
