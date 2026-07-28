@@ -12,6 +12,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ServiceModal, { type ServiceDetail } from "./ServiceModal";
+import villa1 from "@/assets/elinstallation-villa-1.jpg.asset.json";
+import villa2 from "@/assets/elinstallation-villa-2.jpg.asset.json";
 
 const services: ServiceDetail[] = [
   {
