@@ -41,7 +41,7 @@ const ServiceModal = ({ service, open, onOpenChange }: ServiceModalProps) => {
         {/* Image gallery / placeholder area */}
         <div className="relative w-full h-64 sm:h-80 bg-muted">
           {service.images && service.images.length > 0 ? (
-            <div className="grid grid-cols-2 h-full gap-1">
+            <div className={`grid h-full gap-1 ${service.images.length > 1 ? "grid-cols-2" : "grid-cols-1"}`}>
               {service.images.slice(0, 2).map((src, i) => (
                 <img
                   key={i}
