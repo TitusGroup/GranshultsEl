@@ -10,9 +10,9 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[hsl(222_60%_10%)] via-[hsl(222_55%_14%)] to-[hsl(212_45%_20%)]" />
 
-        {/* GE monogram mark — positioned right, brand-tinted */}
+        {/* GE monogram mark — positioned right, white for contrast */}
         <div
-          className="absolute top-1/2 right-[-6vw] md:right-[2vw] -translate-y-1/2 select-none font-bold tracking-tighter text-[46vw] md:text-[34vw] lg:text-[28vw] leading-none text-brand/[0.14]"
+          className="absolute top-1/2 right-[-6vw] md:right-[2vw] -translate-y-1/2 select-none font-bold tracking-tighter text-[46vw] md:text-[34vw] lg:text-[28vw] leading-none text-white/[0.18]"
           aria-hidden="true"
         >
           GE
@@ -20,7 +20,7 @@ const Hero = () => {
 
         {/* Full name watermark */}
         <span
-          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.09]"
+          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.14]"
           aria-hidden="true"
         >
           {company.shortName}
