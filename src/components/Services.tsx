@@ -30,6 +30,7 @@ const services: ServiceDetail[] = [
       "Uttag, strömbrytare och belysning",
       "Dokumentation och egenkontroll enligt norm",
     ],
+    images: [villa1.url, villa2.url],
   },
   {
     icon: Sun,
