@@ -20,7 +20,7 @@ const Hero = () => {
 
         {/* Full name watermark */}
         <span
-          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.09]"
+          className="absolute bottom-[12%] right-[6%] select-none whitespace-nowrap font-semibold tracking-[0.22em] uppercase text-[3.2vw] md:text-[2.2vw] text-white/[0.14]"
           aria-hidden="true"
         >
           {company.shortName}
