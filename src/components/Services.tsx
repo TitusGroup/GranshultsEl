@@ -18,6 +18,8 @@ import solceller1 from "@/assets/solceller-1.jpg.asset.json";
 import solceller2 from "@/assets/solceller-2.jpg.asset.json";
 import solceller3 from "@/assets/solceller-3.jpg.asset.json";
 import solceller4 from "@/assets/solceller-4.jpg.asset.json";
+import laddbox1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
+
 
 const services: ServiceDetail[] = [
   {
@@ -66,6 +68,7 @@ const services: ServiceDetail[] = [
       "Hjälp med grönt avdrag",
       "Support och garanti",
     ],
+    images: [laddbox1.url],
   },
   {
     icon: Lightbulb,
