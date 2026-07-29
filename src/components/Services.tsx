@@ -19,6 +19,8 @@ import solceller2 from "@/assets/solceller-2.jpg.asset.json";
 import solceller3 from "@/assets/solceller-3.jpg.asset.json";
 import solceller4 from "@/assets/solceller-4.jpg.asset.json";
 import laddbox1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
+import fastighet1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
+import fastighet2 from "@/assets/fastighetsautomation-2.jpg.asset.json";
 
 
 const services: ServiceDetail[] = [
@@ -129,6 +131,7 @@ const services: ServiceDetail[] = [
       "Larm och säkerhetsfunktioner",
       "Skräddarsydda lösningar för stora och små fastigheter",
     ],
+    images: [fastighet1.url, fastighet2.url],
   },
   {
     icon: Cog,
