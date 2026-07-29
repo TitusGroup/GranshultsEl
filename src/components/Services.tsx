@@ -50,6 +50,7 @@ const services: ServiceDetail[] = [
       "Ansökan om grönt avdrag",
       "Drift och övervakning av anläggningen",
     ],
+    images: [solceller1.url, solceller2.url, solceller3.url, solceller4.url],
   },
   {
     icon: Plug,
