@@ -129,6 +129,7 @@ const services: ServiceDetail[] = [
       "Larm och säkerhetsfunktioner",
       "Skräddarsydda lösningar för stora och små fastigheter",
     ],
+    images: [fastighet1.url, fastighet2.url],
   },
   {
     icon: Cog,
