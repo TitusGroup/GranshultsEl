@@ -38,7 +38,7 @@ const services: ServiceDetail[] = [
   },
   {
     icon: Sun,
-    title: "Solceller",
+    title: "Solceller & batterilager",
     description:
       "Vi planerar och installerar solcellsanläggningar för villa och fastighet. Hjälp hela vägen från offert till driftsättning.",
     longDescription:
