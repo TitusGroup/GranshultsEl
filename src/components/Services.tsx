@@ -21,6 +21,8 @@ import solceller4 from "@/assets/solceller-4.jpg.asset.json";
 import laddbox1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
 import fastighet1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
 import fastighet2 from "@/assets/fastighetsautomation-2.jpg.asset.json";
+import datanatverk1 from "@/assets/datanatverk-inbrottslarm-1.jpg.asset.json";
+import datanatverk2 from "@/assets/datanatverk-inbrottslarm-2.png.asset.json";
 
 
 const services: ServiceDetail[] = [
@@ -162,6 +164,7 @@ const services: ServiceDetail[] = [
       "Montering av inbrottslarm och detektorer",
       "Koppling till larmcentral",
     ],
+    images: [datanatverk1.url, datanatverk2.url],
   },
 ];
 
