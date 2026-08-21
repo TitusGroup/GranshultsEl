@@ -44,11 +44,11 @@ const ServiceModal = ({ service, open, onOpenChange }: ServiceModalProps) => {
             <div
               className={`grid h-full gap-1 ${
                 service.images.length === 1
-                  ? "grid-cols-1"
+                  ? "grid-cols-1 grid-rows-1"
                   : service.images.length === 2
-                  ? "grid-cols-2"
+                  ? "grid-cols-2 grid-rows-1"
                   : service.images.length === 3
-                  ? "grid-cols-3"
+                  ? "grid-cols-3 grid-rows-1"
                   : "grid-cols-2 grid-rows-2"
               }`}
             >
