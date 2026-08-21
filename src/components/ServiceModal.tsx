@@ -9,13 +9,15 @@ import { Button } from "@/components/ui/button";
 import { X, ImageIcon, ArrowRight, Phone } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
+export type ServiceImage = string | { url: string; position?: string };
+
 export interface ServiceDetail {
   icon: LucideIcon;
   title: string;
   description: string;
   longDescription: string;
   features: string[];
-  images?: string[];
+  images?: ServiceImage[];
 }
 
 interface ServiceModalProps {
@@ -39,7 +41,11 @@ const ServiceModal = ({ service, open, onOpenChange }: ServiceModalProps) => {
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-3xl w-[calc(100%-2rem)] p-0 overflow-hidden border-border bg-card rounded-xl shadow-2xl max-h-[90vh] overflow-y-auto">
         {/* Image gallery / placeholder area */}
-        <div className="relative w-full h-64 sm:h-80 bg-muted">
+        <div
+          className={`relative w-full bg-muted ${
+            service.images && service.images.length === 1 ? "h-80 sm:h-96" : "h-64 sm:h-80"
+          }`}
+        >
           {service.images && service.images.length > 0 ? (
             <div
               className={`grid h-full gap-1 ${
@@ -52,14 +58,19 @@ const ServiceModal = ({ service, open, onOpenChange }: ServiceModalProps) => {
                   : "grid-cols-2 grid-rows-2"
               }`}
             >
-              {service.images.slice(0, 4).map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${service.title} ${i + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              ))}
+              {service.images.slice(0, 4).map((img, i) => {
+                const src = typeof img === "string" ? img : img.url;
+                const position = typeof img === "string" ? "center" : img.position ?? "center";
+                return (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`${service.title} ${i + 1}`}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: position }}
+                  />
+                );
+              })}
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center h-full text-muted-foreground">
@@ -72,7 +83,7 @@ const ServiceModal = ({ service, open, onOpenChange }: ServiceModalProps) => {
               <p className="mt-4 text-sm font-medium">Bilder kommer snart</p>
             </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card to-transparent" />
           <button
             onClick={() => onOpenChange(false)}
             className="absolute top-4 right-4 p-2 rounded-full bg-background/80 backdrop-blur-sm text-foreground hover:bg-background transition-colors"
