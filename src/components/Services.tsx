@@ -164,6 +164,7 @@ const services: ServiceDetail[] = [
       "Montering av inbrottslarm och detektorer",
       "Koppling till larmcentral",
     ],
+    images: [datanatverk1.url, datanatverk2.url],
   },
 ];
 
