@@ -70,7 +70,7 @@ const services: ServiceDetail[] = [
       "Hjälp med grönt avdrag",
       "Support och garanti",
     ],
-    images: [laddbox1.url],
+    images: [{ url: laddbox1.url, position: "top" }],
   },
   {
     icon: Lightbulb,
