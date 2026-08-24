@@ -49,7 +49,7 @@ const Hero = () => {
             <MapPin className="h-3.5 w-3.5" /> {company.area}
           </div>
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight text-white leading-[1.05] mb-6">
-            Trygg el utförd av <span className="text-brand">certifierade</span> elektriker.
+            Trygga elinstallationer utförs av <span className="text-brand">behöriga</span> elektriker.
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10">
             Från elinstallation och solceller till laddboxar och felsökning —
