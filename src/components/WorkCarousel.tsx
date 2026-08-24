@@ -7,35 +7,63 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
-import solar from "@/assets/work-solar.jpg";
-import panel from "@/assets/work-panel.jpg";
-import lighting from "@/assets/work-lighting.jpg";
-import ev from "@/assets/work-ev.jpg";
+import villa1 from "@/assets/elinstallation-villa-1.jpg.asset.json";
+import villa2 from "@/assets/elinstallation-villa-2.jpg.asset.json";
+import solar1 from "@/assets/solceller-1.jpg.asset.json";
+import solar4 from "@/assets/solceller-4.jpg.asset.json";
+import ev1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
+import auto1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
+import net1 from "@/assets/datanatverk-inbrottslarm-2.png.asset.json";
+import alarm1 from "@/assets/datanatverk-inbrottslarm-1.jpg.asset.json";
 
 const projects = [
   {
-    image: solar,
-    title: "Solcellsanläggning, villa",
+    image: villa1.url,
+    title: "Nyinstallation, villa",
     location: "Bankeryd",
-    description: "Komplett installation av takmonterade solpaneler med växelriktare och övervakning.",
+    description: "Komplett eldragning i nybyggd villa — kanalisation, dosor och gruppledningar på plats innan väggarna stängs.",
   },
   {
-    image: panel,
-    title: "Nytt elskåp & jordfelsbrytare",
+    image: villa2.url,
+    title: "Eldragning & dosmontage",
     location: "Jönköping",
-    description: "Byte av gammal elcentral till modern lösning med personskydd på samtliga grupper.",
+    description: "Noggrant förlagda ledningar och infästningar i regelvägg, förberett för uttag och belysning.",
   },
   {
-    image: lighting,
-    title: "LED-belysning i kök",
-    location: "Huskvarna",
-    description: "Spotlights och bänkbelysning som lyfter köket och sänker elförbrukningen.",
+    image: solar1.url,
+    title: "Solcellsanläggning på tak",
+    location: "Jönköpingsområdet",
+    description: "Takmonterade solpaneler installerade med säker infästning och komplett elanslutning.",
   },
   {
-    image: ev,
+    image: solar4.url,
+    title: "Växelriktare & batterilager",
+    location: "Bankeryd",
+    description: "Montage av växelriktare och elutrustning för egenproducerad solel med övervakning.",
+  },
+  {
+    image: ev1.url,
     title: "Laddbox för elbil",
     location: "Norrahammar",
-    description: "Wallbox installerad på fasad med separat säkring och appstyrning.",
+    description: "Laddstation monterad på fasad med egen säkring, jordfelsskydd och smart styrning.",
+  },
+  {
+    image: auto1.url,
+    title: "Fastighetsautomation",
+    location: "Jönköping",
+    description: "Uppbyggnad av styrskåp för fastighetens ventilation, värme och belysning.",
+  },
+  {
+    image: net1.url,
+    title: "Datanätverk & patchpanel",
+    location: "Huskvarna",
+    description: "Strukturerad kabeldragning och inkoppling av patchpanel i nätverksrack.",
+  },
+  {
+    image: alarm1.url,
+    title: "Inbrottslarm",
+    location: "Bankeryd",
+    description: "Installation av larmsystem med manöverpanel, detektorer och driftsättning på plats.",
   },
 ];
 
@@ -51,7 +79,7 @@ const WorkCarousel = () => {
             Utvalda projekt från trakten.
           </h2>
           <p className="text-lg text-muted-foreground mt-6">
-            Ett axplock av jobb vi gjort åt privatpersoner och företag i Jönköpingsområdet.
+            Riktiga bilder från jobb vi utfört åt privatpersoner och företag i Jönköpingsområdet.
           </p>
         </div>
 
