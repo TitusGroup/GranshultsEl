@@ -19,9 +19,12 @@
     --primary: 222 60% 15%;
     --primary-foreground: 210 40% 98%;
 
-    /* Brand accent: mid blue */
+    /* Brand accent: mid blue (used on light surfaces / buttons with white text) */
     --brand: 212 56% 43%;
     --brand-foreground: 210 40% 98%;
+
+    /* Brand accent for text on dark backgrounds — brighter for WCAG AA (>=4.5:1) */
+    --brand-bright: 212 80% 58%;
 
     --secondary: 214 32% 91%;
     --secondary-foreground: 222 50% 15%;
