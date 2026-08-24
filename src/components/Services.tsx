@@ -23,6 +23,7 @@ import fastighet1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
 import fastighet2 from "@/assets/fastighetsautomation-2.jpg.asset.json";
 import datanatverk1 from "@/assets/datanatverk-inbrottslarm-1.jpg.asset.json";
 import datanatverk2 from "@/assets/datanatverk-inbrottslarm-2.png.asset.json";
+import automation1 from "@/assets/automation-1.jpg.asset.json";
 
 
 const services: ServiceDetail[] = [
