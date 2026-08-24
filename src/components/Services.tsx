@@ -150,6 +150,7 @@ const services: ServiceDetail[] = [
       "Fjärrövervakning och driftlarm",
       "Energibesparande reglering",
     ],
+    images: [{ url: automation1.url, position: "center" }],
   },
   {
     icon: ShieldCheck,
