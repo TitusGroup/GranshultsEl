@@ -25,9 +25,9 @@ const projects = [
   },
   {
     image: villa2.url,
-    title: "Eldragning & dosmontage",
+    title: "El service",
     location: "Jönköping",
-    description: "Noggrant förlagda ledningar och infästningar i regelvägg, förberett för uttag och belysning.",
+    description: "Service, felsökning och akuta elarbeten i bostäder och företag — snabb hjälp när strömmen sviker.",
   },
   {
     image: solar1.url,
