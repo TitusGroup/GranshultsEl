@@ -1,6 +1,6 @@
 import { ShieldCheck, Award, Clock, Users } from "lucide-react";
 import { company } from "@/lib/company";
-import electricianImg from "@/assets/about-electrician.jpg.asset.json";
+import electricianImg from "@/assets/about-electrician.png.asset.json";
 
 const stats = [
   { icon: Award, label: "Års erfarenhet", value: "15+" },
