@@ -34,11 +34,11 @@ const About = () => {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="relative flex-1 min-h-[420px] rounded-2xl overflow-hidden border border-border shadow-card">
+            <div className="relative w-full aspect-[1356/1800] rounded-2xl overflow-hidden border border-border shadow-card">
               <img
                 src={electricianImg.url}
                 alt="Andreas, elektriker på Granshults el"
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
             </div>
             <div className="grid grid-cols-2 gap-4">
