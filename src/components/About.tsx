@@ -11,25 +11,15 @@ const stats = [
 
 const About = () => {
   return (
-    <section id="about" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background image of the electrician */}
-      <img
-        src={electricianImg.url}
-        alt="Andreas, elektriker på Granshults el"
-        className="absolute inset-0 w-full h-full object-cover object-top"
-      />
-      {/* Gradient overlays for readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/40" />
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30" />
-
-      <div className="container relative z-10 mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="bg-background/75 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-border/50 shadow-xl">
+    <section id="about" className="py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+          <div className="flex flex-col justify-center">
             <p className="text-eyebrow text-brand mb-4">Om {company.name}</p>
             <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-6">
               Lokal elektriker du kan lita på.
             </h2>
-            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed mb-10">
+            <div className="space-y-5 text-lg text-muted-foreground leading-relaxed">
               <p>
                 {company.name} drivs av Andreas och är baserad i Bankeryd. Vi arbetar med
                 både privatpersoner och företag i Jönköping med omnejd — och vår filosofi är
@@ -41,7 +31,16 @@ const About = () => {
                 utfört arbete.
               </p>
             </div>
+          </div>
 
+          <div className="flex flex-col gap-6">
+            <div className="relative flex-1 min-h-[420px] rounded-2xl overflow-hidden border border-border shadow-card">
+              <img
+                src={electricianImg.url}
+                alt="Andreas, elektriker på Granshults el"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
+            </div>
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s) => (
                 <div key={s.label} className="p-5 rounded-lg bg-muted/60 border border-border">
@@ -52,8 +51,6 @@ const About = () => {
               ))}
             </div>
           </div>
-
-          <div className="hidden lg:block" aria-hidden="true" />
         </div>
       </div>
     </section>
