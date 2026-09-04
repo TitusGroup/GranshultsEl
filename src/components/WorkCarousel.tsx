@@ -31,15 +31,15 @@ const projects = [
   },
   {
     image: solar1.url,
-    title: "Solcellsanläggning på tak",
+    title: "Solcellsanläggning på mark",
     location: "Jönköpingsområdet",
-    description: "Takmonterade solpaneler installerade med säker infästning och komplett elanslutning.",
+    description: "Markmonterade solpaneler på stadigt underlag, anslutna och klara för drift.",
   },
   {
     image: solar4.url,
-    title: "Växelriktare & batterilager",
+    title: "Solcellsanläggning på tak",
     location: "Bankeryd",
-    description: "Montage av växelriktare och elutrustning för egenproducerad solel med övervakning.",
+    description: "Takmonterade solpaneler med säker infästning, växelriktare och komplett elanslutning.",
   },
   {
     image: ev1.url,
@@ -55,7 +55,7 @@ const projects = [
   },
   {
     image: net1.url,
-    title: "Datanätverk & patchpanel",
+    title: "Datanätverk",
     location: "Huskvarna",
     description: "Strukturerad kabeldragning och inkoppling av patchpanel i nätverksrack.",
   },
