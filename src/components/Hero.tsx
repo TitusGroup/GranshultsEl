@@ -174,9 +174,10 @@ const Hero = () => {
       </div>
 
       {/* Läsbarhetslager */}
-      <div className="absolute inset-0 bg-[hsl(222_60%_8%)]/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(222_60%_8%)] via-[hsl(222_60%_9%)]/85 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222_60%_8%)] via-transparent to-[hsl(222_60%_8%)]/50" />
+      <div className="absolute inset-0 bg-[hsl(222_60%_8%)]/45" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(222_60%_8%)]/95 via-[hsl(222_60%_9%)]/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[hsl(222_60%_8%)]/90 via-transparent to-[hsl(222_60%_8%)]/40" />
+
       <div
         className="absolute inset-0 opacity-[0.05]"
         style={{
