@@ -7,60 +7,60 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
-import villa1 from "@/assets/elinstallation-villa-1.jpg.asset.json";
-import villa2 from "@/assets/elinstallation-villa-2.jpg.asset.json";
-import solar1 from "@/assets/solceller-1.jpg.asset.json";
-import solar4 from "@/assets/solceller-4.jpg.asset.json";
-import ev1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
-import auto1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
-import net1 from "@/assets/datanatverk-inbrottslarm-2.png.asset.json";
-import alarm1 from "@/assets/datanatverk-inbrottslarm-1.jpg.asset.json";
+import villa1 from "@/assets/elinstallation-villa-1.jpg";
+import villa2 from "@/assets/elinstallation-villa-2.jpg";
+import solar1 from "@/assets/solceller-1.jpg";
+import solar4 from "@/assets/solceller-4.jpg";
+import ev1 from "@/assets/laddbox-elbil-1.jpg";
+import auto1 from "@/assets/fastighetsautomation-1.jpg";
+import net1 from "@/assets/datanatverk-inbrottslarm-2.png";
+import alarm1 from "@/assets/datanatverk-inbrottslarm-1.jpg";
 
 const projects = [
   {
-    image: villa1.url,
+    image: villa1,
     title: "Nyinstallation, villa",
     location: "Bankeryd",
     description: "Komplett eldragning i nybyggd villa — kanalisation, dosor och gruppledningar på plats innan väggarna stängs.",
   },
   {
-    image: villa2.url,
+    image: villa2,
     title: "El service",
     location: "Jönköping",
     description: "Service, felsökning och akuta elarbeten i bostäder och företag — snabb hjälp när strömmen sviker.",
   },
   {
-    image: solar1.url,
+    image: solar1,
     title: "Solcellsanläggning på mark",
     location: "Jönköpingsområdet",
     description: "Markmonterade solpaneler på stadigt underlag, anslutna och klara för drift.",
   },
   {
-    image: solar4.url,
+    image: solar4,
     title: "Solcellsanläggning på tak",
     location: "Bankeryd",
     description: "Takmonterade solpaneler med säker infästning, växelriktare och komplett elanslutning.",
   },
   {
-    image: ev1.url,
+    image: ev1,
     title: "Laddbox för elbil",
     location: "Norrahammar",
     description: "Laddstation monterad på fasad med egen säkring, jordfelsskydd och smart styrning.",
   },
   {
-    image: auto1.url,
+    image: auto1,
     title: "Fastighetsautomation",
     location: "Jönköping",
     description: "Uppbyggnad av styrskåp för fastighetens ventilation, värme och belysning.",
   },
   {
-    image: net1.url,
+    image: net1,
     title: "Datanätverk",
     location: "Huskvarna",
     description: "Strukturerad kabeldragning och inkoppling av patchpanel i nätverksrack.",
   },
   {
-    image: alarm1.url,
+    image: alarm1,
     title: "Inbrottslarm",
     location: "Bankeryd",
     description: "Installation av larmsystem med manöverpanel, detektorer och driftsättning på plats.",

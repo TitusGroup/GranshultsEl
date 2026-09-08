@@ -1,6 +1,6 @@
 import { ShieldCheck, Award, Clock, Users } from "lucide-react";
 import { company } from "@/lib/company";
-import electricianImg from "@/assets/about-electrician.png.asset.json";
+import electricianImg from "@/assets/about-electrician.png";
 
 const stats = [
   { icon: Award, label: "Års erfarenhet", value: "15+" },
@@ -36,7 +36,7 @@ const About = () => {
           <div className="flex flex-col gap-6">
             <div className="relative w-full aspect-[1356/1800] rounded-2xl overflow-hidden border border-border shadow-card">
               <img
-                src={electricianImg.url}
+                src={electricianImg}
                 alt="Andreas, elektriker på Granshults el"
                 className="absolute inset-0 w-full h-full object-cover object-center"
               />

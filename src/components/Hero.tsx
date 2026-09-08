@@ -7,10 +7,10 @@ import { Phone, ArrowRight, ArrowLeft, ShieldCheck, MapPin } from "lucide-react"
 import { Link } from "react-router-dom";
 import { company } from "@/lib/company";
 
-import villa1 from "@/assets/elinstallation-villa-1.jpg.asset.json";
-import solar4 from "@/assets/solceller-4.jpg.asset.json";
-import ev1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
-import auto1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
+import villa1 from "@/assets/elinstallation-villa-1.jpg";
+import solar4 from "@/assets/solceller-4.jpg";
+import ev1 from "@/assets/laddbox-elbil-1.jpg";
+import auto1 from "@/assets/fastighetsautomation-1.jpg";
 
 type Cta = { label: string; to?: string; href?: string };
 
@@ -29,7 +29,7 @@ type Slide = {
 /** Ändra, lägg till eller ta bort slides här — inget annat behöver röras. */
 const slides: Slide[] = [
   {
-    image: villa1.url,
+    image: villa1,
     alt: "Nyinstallation av el i villa i Bankeryd",
     eyebrow: "Elinstallation",
     title: "Trygga elinstallationer utförs av",
@@ -40,7 +40,7 @@ const slides: Slide[] = [
     secondaryCta: { label: "Begär offert", to: "/contact" },
   },
   {
-    image: solar4.url,
+    image: solar4,
     alt: "Solcellsanläggning på tak",
     eyebrow: "Solceller & batterilager",
     title: "Egen el från taket —",
@@ -51,7 +51,7 @@ const slides: Slide[] = [
     secondaryCta: { label: "Begär offert", to: "/contact" },
   },
   {
-    image: ev1.url,
+    image: ev1,
     imagePosition: "center top",
     alt: "Laddbox för elbil monterad på fasad",
     eyebrow: "Laddbox för elbil",
@@ -63,7 +63,7 @@ const slides: Slide[] = [
     secondaryCta: { label: "Våra tjänster", to: "/services" },
   },
   {
-    image: auto1.url,
+    image: auto1,
     alt: "Styrskåp för fastighetsautomation",
     eyebrow: "Automation & fastighet",
     title: "Styrning som håller",
