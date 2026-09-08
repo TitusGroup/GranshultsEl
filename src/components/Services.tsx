@@ -12,18 +12,18 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ServiceModal, { type ServiceDetail } from "./ServiceModal";
-import villa1 from "@/assets/elinstallation-villa-1.jpg.asset.json";
-import villa2 from "@/assets/elinstallation-villa-2.jpg.asset.json";
-import solceller1 from "@/assets/solceller-1.jpg.asset.json";
-import solceller2 from "@/assets/solceller-2.jpg.asset.json";
-import solceller3 from "@/assets/solceller-3.jpg.asset.json";
-import solceller4 from "@/assets/solceller-4.jpg.asset.json";
-import laddbox1 from "@/assets/laddbox-elbil-1.jpg.asset.json";
-import fastighet1 from "@/assets/fastighetsautomation-1.jpg.asset.json";
-import fastighet2 from "@/assets/fastighetsautomation-2.jpg.asset.json";
-import datanatverk1 from "@/assets/datanatverk-inbrottslarm-1.jpg.asset.json";
-import datanatverk2 from "@/assets/datanatverk-inbrottslarm-2.png.asset.json";
-import automation1 from "@/assets/automation-1.jpg.asset.json";
+import villa1 from "@/assets/elinstallation-villa-1.jpg";
+import villa2 from "@/assets/elinstallation-villa-2.jpg";
+import solceller1 from "@/assets/solceller-1.jpg";
+import solceller2 from "@/assets/solceller-2.jpg";
+import solceller3 from "@/assets/solceller-3.jpg";
+import solceller4 from "@/assets/solceller-4.jpg";
+import laddbox1 from "@/assets/laddbox-elbil-1.jpg";
+import fastighet1 from "@/assets/fastighetsautomation-1.jpg";
+import fastighet2 from "@/assets/fastighetsautomation-2.jpg";
+import datanatverk1 from "@/assets/datanatverk-inbrottslarm-1.jpg";
+import datanatverk2 from "@/assets/datanatverk-inbrottslarm-2.png";
+import automation1 from "@/assets/automation-1.jpg";
 
 
 const services: ServiceDetail[] = [
@@ -41,7 +41,7 @@ const services: ServiceDetail[] = [
       "Uttag, strömbrytare och belysning",
       "Dokumentation och egenkontroll enligt norm",
     ],
-    images: [villa1.url, villa2.url],
+    images: [villa1, villa2],
   },
   {
     icon: Sun,
@@ -57,7 +57,7 @@ const services: ServiceDetail[] = [
       "Ansökan om grönt avdrag",
       "Drift och övervakning av anläggningen",
     ],
-    images: [solceller1.url, solceller2.url, solceller3.url, solceller4.url],
+    images: [solceller1, solceller2, solceller3, solceller4],
   },
   {
     icon: Plug,
@@ -73,7 +73,7 @@ const services: ServiceDetail[] = [
       "Hjälp med grönt avdrag",
       "Support och garanti",
     ],
-    images: [{ url: laddbox1.url, position: "top" }],
+    images: [{ url: laddbox1, position: "top" }],
   },
   {
     icon: Lightbulb,
@@ -134,7 +134,7 @@ const services: ServiceDetail[] = [
       "Larm och säkerhetsfunktioner",
       "Skräddarsydda lösningar för stora och små fastigheter",
     ],
-    images: [fastighet1.url, fastighet2.url],
+    images: [fastighet1, fastighet2],
   },
   {
     icon: Cog,
@@ -150,7 +150,7 @@ const services: ServiceDetail[] = [
       "Fjärrövervakning och driftlarm",
       "Energibesparande reglering",
     ],
-    images: [{ url: automation1.url, position: "center" }],
+    images: [{ url: automation1, position: "center" }],
   },
   {
     icon: ShieldCheck,
@@ -166,7 +166,7 @@ const services: ServiceDetail[] = [
       "Montering av inbrottslarm och detektorer",
       "Koppling till larmcentral",
     ],
-    images: [datanatverk1.url, datanatverk2.url],
+    images: [datanatverk1, datanatverk2],
   },
 ];
 
